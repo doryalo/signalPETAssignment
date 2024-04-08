@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "deea84c4-abd2-4d43-8a1e-5239ac305c1c",
+		"name": "API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "buddy",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "specie",
+							"value": "dog",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "5",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "breed",
+							"value": "Golden Retriever",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"contentType": "",
+							"type": "file",
+							"src": "/Users/doryaloz/Downloads/image (6).png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/upload-xray",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"upload-xray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update data",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"species\": \"Dog\",\n  \"name\": \"Buddy\",\n  \"age\": 5,\n  \"breed\": \"Golden Retriever\",\n  \"xray_image_url\": \"https://example.com/new-xray.jpg\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/xray/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"xray",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Xray By id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/xray/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"xray",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Xrays",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/xrays",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"xrays"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Xray By id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "buddy",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "specie",
+							"value": "dog",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "5",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "breed",
+							"value": "Golden Retriever",
+							"contentType": "",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"contentType": "",
+							"type": "file",
+							"src": "/Users/doryaloz/Downloads/image (6).png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/xray/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"xray",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
